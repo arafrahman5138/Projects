@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:title="@string/order">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/filterABC"
+                    android:title="@string/filterABC"/>
+                <item
+                    android:id="@+id/filterZYX"
+                    android:title="@string/filterZYX" />
+                <item
+                    android:id="@+id/filterDefault"
+                    android:title="@string/filterDefault" />
+            </group>
+        </menu>
+    </item>
+
+
+    <item android:title="@string/providers">
+        <menu>
+            <group android:checkableBehavior="all">
+                <item
+                    android:id="@+id/filterCodeCademy"
+                    android:title="@string/filterCodeCademy"/>
+                <item
+                    android:id="@+id/filterCoursera"
+                    android:title="@string/filterCoursera"/>
+                <item
+                    android:id="@+id/filterFutureLearn"
+                    android:title="@string/filterFutureLearn"/>
+                <item
+                    android:id="@+id/filterSkillShare"
+                    android:title="@string/filterSkillShare"/>
+                </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/clearFilters"
+        android:title="@string/clear_filters"/>
+</menu>

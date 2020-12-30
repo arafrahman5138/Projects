@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchPageResults">
+
+    <TextView
+        android:id="@+id/searchVal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        app:autoSizeMaxTextSize="65sp"
+        app:autoSizeMinTextSize="21sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/results"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/results"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/Navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchVal">
+
+        <LinearLayout
+            android:id="@+id/resultView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/noResultsText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="125dp"
+                android:gravity="center"
+                android:text="@string/no_results"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+                android:textSize="40sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/Navigation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nav_bar_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/homeButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="39dip"
+            android:layout_height="37dip"
+            android:layout_marginEnd="60dip"
+            android:background="@drawable/ic_home"
+            android:backgroundTint="@color/colorButtonsLightMode"
+            android:scaleType="fitCenter" />
+
+        <Button
+            android:id="@+id/searchButton2"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_marginEnd="60dip"
+            android:layout_weight="0"
+            android:background="@drawable/ic_search_black_24dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:scaleType="fitCenter" />
+
+        <Button
+            android:id="@+id/settingsButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_weight="0"
+            android:background="@drawable/ic_settings_black_24dp"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/blurEffect"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="10"
+        android:background="#80000000"
+        android:contentDescription="@string/blurEffectDescription"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
